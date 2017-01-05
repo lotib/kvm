@@ -13,6 +13,6 @@ sfdisk /dev/nbd0 -D -uM  << EOF
 EOF
 mkswap /dev/nbd0p1
 mkfs.ext4 /dev/nbd0p2
-#qemu-nbd -d /dev/nbd0
+qemu-nbd -d /dev/nbd0
 
 echo "finished"
